@@ -12,6 +12,7 @@
         <div class="circle"> </div>
         <header>
             <a href="#"><img src="img/logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
             <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
@@ -31,7 +32,17 @@
                 <a href="#">Learn More</a>
             </div>
             <div class="imgBox">
-                
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/cocacola1.png"></div>
+                        <div class="swiper-slide"><img src="img/cocacola2.png"></div>
+                        <div class="swiper-slide"><img src="img/cocacola3.png"></div>
+                        <div class="swiper-slide"><img src="img/cocacola4.png"></div>
+                        <div class="swiper-slide"><img src="img/cocacola5.png"></div>
+                        <div class="swiper-slide"><img src="img/cocacola6.png"></div>
+
+                    </div>
+                </div>
             </div>
         </div>
         <ul class="sci">
@@ -41,5 +52,30 @@
         </ul>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            effect:'coverflow',
+            grabCursor:true,
+            centeredSlides:true,
+            slidesPerView:'auto',
+            coverflowEffect:{
+                rotate:50,
+                stretch:0,
+                depth:200,
+                modifier:1,
+                slideShadows:true,
+            },
+            pagination:{
+                e1:'.swiper-pagination'
+            },
+            loop:true,
+        });
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle')
+            const navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>    
 </body>
 </html>

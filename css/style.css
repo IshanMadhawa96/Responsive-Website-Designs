@@ -52,6 +52,19 @@ header .navigation{
 header .navigation li{
     list-style: none;
 }
+header .navigation.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100% ;
+    display: flex; 
+    background: #e51e2a;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index:10000 ;
+}
 
 header .navigation li a{
     display: inline-block;
@@ -133,4 +146,97 @@ header .navigation li a{
 .scci li a img{
     filter: invert(1);
     transform: scale(0.5);
+}
+
+.swiper-container{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+}
+.swiper-slide img{
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+}
+
+.content .imgBox{
+    width: 500px;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.content .imgBox .img{
+    max-width: 150px;
+}
+
+.swiper-container-3d .swiper-slide-show-left,
+.swiper-container-3d .swiper-slide-show-right{
+    background-image: none;
+}
+
+@media (max-width:991px){
+    header{
+        padding: 40px;
+    }
+    section{
+        padding:150px 40px;
+    }
+    .sci{
+        left:40px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content .textBox,
+    .content .imgBox{
+        max-width: 100%;
+    }
+    .swiper-slide{
+        height: 300px; 
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #e51e2a;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+       
+    }
+    .toggle{
+        position:relative;
+        width : 30px;
+        height : 30px;
+        background: url(img/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .toggle.active{
+        position: fixed;
+        right: 40px;
+        background: url(img/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
