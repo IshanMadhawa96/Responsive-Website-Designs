@@ -1,6 +1,6 @@
 # Responsive Website Design Project
 
-![Responsive Website Design](https://github.com/IshanMadhawa96/Responsive-Website-Designs/blob/main/Responsive.jpg)
+![Responsive Website Design](https://github.com/IshanMadhawa96/Responsive-Website-Designs/blob/main/Project-01-CocaCola/Responsive.jpg)
 
 Welcome to the Responsive Website Design project! This project focuses on creating a modern and user-friendly website that seamlessly adapts to various screen sizes and devices, ensuring an optimal browsing experience for all users.
 
